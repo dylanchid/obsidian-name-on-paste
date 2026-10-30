@@ -13,6 +13,7 @@ jobs:
           node-version: '20'
       - run: npm ci
       - run: npm run build
+      - run: npm run lint
       - run: npm test
       - name: Validate manifest
         run: node -e "const m=require('./manifest.json'); if (!m.id || !m.name || !/^\d+\.\d+\.\d+$/.test(m.version)) process.exit(1)"

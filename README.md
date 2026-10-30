@@ -44,7 +44,7 @@ Hotkeys can be changed in Obsidian's **Hotkeys** settings.
 Use a disposable development vault rather than a primary vault.
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
