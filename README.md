@@ -39,6 +39,10 @@ Hotkeys can be changed in Obsidian's **Hotkeys** settings.
 - **Companion-note options:** control automatic notes, tag-triggered notes, and Canvas placement.
 - **Native Canvas paste and drop interception:** enables the experimental enhancement for pasted images and external image files dropped onto Canvas.
 
+## Install manually
+
+Run `npm ci && npm run check`, then copy `manifest.json`, `main.js`, and `styles.css` into `<vault>/.obsidian/plugins/name-on-paste/`. Enable Name on Paste under **Settings → Community plugins**. Desktop only.
+
 ## Development
 
 Use a disposable development vault rather than a primary vault.
