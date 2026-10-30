@@ -1,0 +1,9 @@
+{
+  "id": "name-on-paste",
+  "name": "Name on Paste",
+  "version": "0.5.0",
+  "minAppVersion": "1.7.2",
+  "description": "Name, organize, and optionally describe clipboard images before placing them in your vault.",
+  "author": "Dylan Chidambaram",
+  "isDesktopOnly": true
+}

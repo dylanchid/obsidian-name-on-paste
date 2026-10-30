@@ -1,0 +1,130 @@
+.name-on-paste-modal {
+  width: min(560px, calc(100vw - 32px));
+}
+
+.name-on-paste-modal .setting-item {
+  align-items: flex-start;
+}
+
+.name-on-paste-modal .setting-item-control {
+  flex: 1;
+}
+
+.name-on-paste-modal input[type="text"] {
+  width: 100%;
+}
+
+.name-on-paste-path {
+  min-height: 1.5em;
+  margin: 8px 0;
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller);
+  overflow-wrap: anywhere;
+}
+
+.name-on-paste-error {
+  min-height: 1.5em;
+  color: var(--text-error);
+  font-size: var(--font-ui-smaller);
+}
+
+.name-on-paste-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.name-on-paste-prompt {
+  position: fixed;
+  right: 18px;
+  bottom: 38px;
+  z-index: var(--layer-popover);
+  width: min(340px, calc(100vw - 36px));
+  padding: 14px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-l);
+  background: var(--background-primary);
+  box-shadow: var(--shadow-l);
+  animation: name-on-paste-prompt-in 160ms ease-out;
+}
+
+.name-on-paste-prompt-header,
+.name-on-paste-prompt-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.name-on-paste-prompt-header {
+  justify-content: space-between;
+}
+
+.name-on-paste-prompt-title {
+  font-size: var(--font-ui-medium);
+  font-weight: var(--font-semibold);
+}
+
+.name-on-paste-prompt-close {
+  flex: none;
+}
+
+.name-on-paste-prompt-description,
+.name-on-paste-prompt-path,
+.name-on-paste-prompt-error {
+  font-size: var(--font-ui-smaller);
+}
+
+.name-on-paste-prompt-description {
+  margin: 2px 0 10px;
+  color: var(--text-muted);
+}
+
+.name-on-paste-prompt-form input {
+  min-width: 0;
+  flex: 1;
+}
+
+.name-on-paste-prompt-path {
+  margin-top: 8px;
+  color: var(--text-faint);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.name-on-paste-prompt-error {
+  margin-top: 6px;
+  color: var(--text-error);
+}
+
+.name-on-paste-prompt-error:empty {
+  display: none;
+}
+
+.name-on-paste-prompt.is-complete .name-on-paste-prompt-description {
+  color: var(--text-success);
+}
+
+@keyframes name-on-paste-prompt-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .name-on-paste-prompt {
+    animation: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .name-on-paste-modal .setting-item {
+    display: block;
+  }
+
+  .name-on-paste-modal .setting-item-control {
+    margin-top: 6px;
+  }
+}
